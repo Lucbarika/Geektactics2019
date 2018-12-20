@@ -1,0 +1,2 @@
+class CourseFeedback < ApplicationRecord
+end

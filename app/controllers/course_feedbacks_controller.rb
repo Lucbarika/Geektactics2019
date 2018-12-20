@@ -1,0 +1,2 @@
+class CourseFeedbacksController < ApplicationController
+end
