@@ -1,7 +1,6 @@
-class CreateProductFeedbacks < ActiveRecord::Migration[5.2]
+class CreatePurchases < ActiveRecord::Migration[5.2]
   def change
-    create_table :product_feedbacks do |t|
-      t.text :content
+    create_table :purchases do |t|
       t.references :student, foreign_key: true
       t.references :product, foreign_key: true
 
