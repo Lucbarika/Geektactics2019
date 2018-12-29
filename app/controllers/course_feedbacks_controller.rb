@@ -1,2 +1,0 @@
-class CourseFeedbacksController < ApplicationController
-end
