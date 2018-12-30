@@ -1,4 +1,4 @@
 class Purchase < ApplicationRecord
-  belongs_to :student
   belongs_to :tool
+  belongs_to :user
 end

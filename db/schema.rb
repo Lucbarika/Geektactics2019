@@ -10,57 +10,49 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_12_29_180448) do
+ActiveRecord::Schema.define(version: 2018_12_29_231427) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "course_feedbacks", force: :cascade do |t|
     t.text "content"
-    t.bigint "tutor_id"
     t.bigint "course_id"
+    t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["course_id"], name: "index_course_feedbacks_on_course_id"
-    t.index ["tutor_id"], name: "index_course_feedbacks_on_tutor_id"
+    t.index ["user_id"], name: "index_course_feedbacks_on_user_id"
   end
 
   create_table "courses", force: :cascade do |t|
-    t.string "name"
+    t.string "title"
     t.text "description"
-    t.bigint "tutor_id"
-    t.bigint "student_id"
+    t.string "category"
+    t.string "code"
+    t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["student_id"], name: "index_courses_on_student_id"
-    t.index ["tutor_id"], name: "index_courses_on_tutor_id"
+    t.index ["user_id"], name: "index_courses_on_user_id"
   end
 
   create_table "purchases", force: :cascade do |t|
-    t.bigint "student_id"
     t.bigint "tool_id"
+    t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["student_id"], name: "index_purchases_on_student_id"
     t.index ["tool_id"], name: "index_purchases_on_tool_id"
-  end
-
-  create_table "students", force: :cascade do |t|
-    t.string "first_name"
-    t.string "last_name"
-    t.string "email"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_purchases_on_user_id"
   end
 
   create_table "tool_feedbacks", force: :cascade do |t|
-    t.text "content"
-    t.bigint "student_id"
     t.bigint "tool_id"
+    t.bigint "user_id"
+    t.text "content"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["student_id"], name: "index_tool_feedbacks_on_student_id"
     t.index ["tool_id"], name: "index_tool_feedbacks_on_tool_id"
+    t.index ["user_id"], name: "index_tool_feedbacks_on_user_id"
   end
 
   create_table "tools", force: :cascade do |t|
@@ -69,21 +61,12 @@ ActiveRecord::Schema.define(version: 2018_12_29_180448) do
     t.string "pdf_url"
     t.string "audio_url"
     t.integer "price"
-    t.bigint "tutor_id"
+    t.bigint "user_id"
     t.bigint "course_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["course_id"], name: "index_tools_on_course_id"
-    t.index ["tutor_id"], name: "index_tools_on_tutor_id"
-  end
-
-  create_table "tutors", force: :cascade do |t|
-    t.string "first_name"
-    t.string "last_name"
-    t.text "biographie"
-    t.string "email"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_tools_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -99,12 +82,12 @@ ActiveRecord::Schema.define(version: 2018_12_29_180448) do
   end
 
   add_foreign_key "course_feedbacks", "courses"
-  add_foreign_key "course_feedbacks", "tutors"
-  add_foreign_key "courses", "students"
-  add_foreign_key "purchases", "students"
+  add_foreign_key "course_feedbacks", "users"
+  add_foreign_key "courses", "users"
   add_foreign_key "purchases", "tools"
-  add_foreign_key "tool_feedbacks", "students"
+  add_foreign_key "purchases", "users"
   add_foreign_key "tool_feedbacks", "tools"
+  add_foreign_key "tool_feedbacks", "users"
   add_foreign_key "tools", "courses"
-  add_foreign_key "tools", "tutors"
+  add_foreign_key "tools", "users"
 end

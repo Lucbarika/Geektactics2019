@@ -1,5 +1,5 @@
 class Course < ApplicationRecord
-  belongs_to :student
-  belongs_to :tutor
+  belongs_to :user
   has_many :course_feedbacks
+  has_many :tools
 end
