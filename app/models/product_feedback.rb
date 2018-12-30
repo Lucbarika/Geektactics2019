@@ -1,2 +1,0 @@
-class ProductFeedback < ApplicationRecord
-end
