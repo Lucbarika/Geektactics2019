@@ -1,1 +1,10 @@
+<%= @course.code %>
+<%= @course.title %>
+<p> Team = all teacher in the different tools of this course</p>
+<%= @course.description %>
+<%= @course.category %>
+
+<% @tools.each do |tool| %>
+<%= tool.name %>
+<% end %>
 

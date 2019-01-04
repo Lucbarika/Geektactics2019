@@ -6,5 +6,7 @@ Rails.application.routes.draw do
   get '/contact', to: 'pages#contact', as: 'contact'
 
   resources :courses, only: [:show]
+  get 'tools/tools_course_index', to: "tools#tools_course_index", as: 'tools_course_index'
+
 
 end
