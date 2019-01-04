@@ -136,3 +136,19 @@ end
     purchase.tool = [Tool.last, Tool.first].sample
   purchase.save!
 end
+
+
+# tool for course index 32
+
+# 3.times do
+#   tool = Tool.new(
+#     name: "tool #{(1..10).to_a.sample}",
+#         description: lorem_ipsum,
+#         price: (1..10).to_a.sample * 100,
+#         pdf_url: "pdf_url_test",
+#         audio_url: "audio_url_test",
+#         user_id: User.last.id,
+#         course_id: 32
+#     )
+# tool.save!
+# end
