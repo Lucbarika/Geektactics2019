@@ -4,7 +4,7 @@ class CoursesController < ApplicationController
     tools_course_index
   end
 
-# method which shows all the tools for one particular course on the course/show page
+  # method which shows all the tools for one particular course on the course/show page
   def tools_course_index
     @course = Course.find(params[:id])
     @tools = @course.tools
