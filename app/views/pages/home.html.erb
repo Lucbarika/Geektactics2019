@@ -1,6 +1,7 @@
 <div class="index-home-container">
   <% @courses.each do |course| %>
     <div class="courses-card">
+      <%= link_to course_path(course) do %>
       <div class="course-title">
         <%= course.title %>
       </div>
@@ -11,5 +12,6 @@
         <%= course.user.first_name %> <%= course.user.last_name %>
       </div>
     </div>
+    <% end %>
   <% end %>
 </div>
