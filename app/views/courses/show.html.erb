@@ -8,8 +8,20 @@
 </p>
 <p> Course description: <%= @course.description %> </p>
 <p> Category: <%= @course.category %> </p>
-<p> List of tools:
+<p> List of tools: </p>
+<div class="index-tool-container">
   <% @tools.each do |tool| %>
-    <%= tool.name %>
+    <div class="tool-card">
+      <div class="card-title">
+        <%= tool.name %>
+      </div>
+      <div class="card-content">
+        <%= tool.description %>
+      </div>
+      <div class="card-footer">
+        <%= tool.pdf_url %>
+        <%= tool.audio_url %>
+      </div>
+    </div>
   <% end %>
-</p>
+</div>
