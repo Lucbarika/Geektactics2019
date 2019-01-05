@@ -7,6 +7,7 @@ Rails.application.routes.draw do
 
   resources :courses, only: [:show]
   get 'tools/tools_course_index', to: "tools#tools_course_index", as: 'tools_course_index'
-
+  get 'users/dashboards', to: 'dashboards#tutor_dashboard', as: 'tutor_dashboard'
+  get 'users/dashboards', to: 'dashboards#student_dashboard', as: 'student_dashboard'
 
 end
