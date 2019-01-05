@@ -21,7 +21,20 @@
           <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
             <li>
               <%= link_to "#" do %>
-                <i class="fa fa-user"></i> <%= t(".profile", default: "Profile") %>
+                <% if current_user.teacher? %>
+                   <%= link_to("Tutor profile", tutor_dashboard_path) %>
+                <% else %>
+                  <i class="fa fa-user"></i> <%= t(".profile", default: "Become tutor") %>
+                <% end %>
+              <% end %>
+            </li>
+            <li>
+              <%= link_to "#" do %>
+                <% if current_user.student? %>
+                  <%= link_to("Student profile", student_dashboard_path) %>
+                <% else %>
+                  <i class="fa fa-user"></i> <%= t(".profile", default: "Become student") %>
+                <% end %>
               <% end %>
             </li>
             <li>
