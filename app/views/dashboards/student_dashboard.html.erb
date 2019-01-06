@@ -1,4 +1,16 @@
+<h1> Your student dashboard </h1>
+<div class="avatar">
+  ToDO uploader picture
+</div>
 <div id="student_name">
-  <%= @tutor.first_name %>
-  <%= @tutor.last_name %>
- </div>
+  <%= @student.first_name %>
+  <%= @student.last_name %>
+</div>
+<div id="student-biographie">
+  <%= @student.biographie %>
+</div>
+
+<% @student_courses.each do |course| %>
+<%= course.title %>
+<% end %>
+
