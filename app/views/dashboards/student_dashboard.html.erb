@@ -3,14 +3,33 @@
   ToDO uploader picture
 </div>
 <div id="student_name">
+  <strong>Student name:</strong>
   <%= @student.first_name %>
   <%= @student.last_name %>
 </div>
 <div id="student-biographie">
-  <%= @student.biographie %>
+  <strong>Biography:</strong> <%= @student.biographie %>
+</div>
+<div class="student-course-container">
+  <p><strong>Your courses: </strong></p>
+  <% @student_courses.each do |course| %>
+  <div id="student-courses">
+    <strong><%= course.title %></strong> détails
+    <% course.tools.each do |tool| %>
+      <div id="student-course-tool">
+      <%= tool.name %>
+      <% end %>
+      </div>
+    <% end %>
+  </div>
+  <div id="add-course">
+    <a href="">add a course</a>
+  </div>
 </div>
 
-<% @student_courses.each do |course| %>
-<%= course.title %>
-<% end %>
-
+<div id="student-purchases">
+  <strong>Your purchases</strong>
+  <% @purchases.each do |purchase| %>
+    <%=purchase.tool.name%>
+  <%end%>
+</div>
