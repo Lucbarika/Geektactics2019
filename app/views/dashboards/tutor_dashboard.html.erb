@@ -1,0 +1,27 @@
+<h1> Your tutor dashboard </h1>
+<div class="avatar">
+  ToDO uploader picture
+</div>
+<div id="tutor_name">
+  <%= @tutor.first_name %>
+  <%= @tutor.last_name %>
+</div>
+
+<div id="tutor-biographie">
+  <%= @tutor.biographie %>
+</div>
+<div class="tutor-course-container">
+  <% @tutor_courses.each do |course| %>
+  <div id="tutor-courses">
+    <%= course.title %>
+    <% course.tools.each do |tool| %>
+      <div id="tutor-course-tool">
+      <%= tool.name %>
+      <% end %>
+      </div>
+    <% end %>
+  </div>
+  <div id="add-course">
+    add a course
+  </div>
+</div>

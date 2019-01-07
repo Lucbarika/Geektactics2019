@@ -10,48 +10,61 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_12_20_222640) do
+ActiveRecord::Schema.define(version: 2019_01_05_203355) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "course_feedbacks", force: :cascade do |t|
+    t.text "content"
+    t.bigint "course_id"
+    t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["course_id"], name: "index_course_feedbacks_on_course_id"
+    t.index ["user_id"], name: "index_course_feedbacks_on_user_id"
   end
 
   create_table "courses", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "product_feedbacks", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "products", force: :cascade do |t|
+    t.string "title"
+    t.text "description"
+    t.string "category"
+    t.string "code"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "purchases", force: :cascade do |t|
-    t.bigint "student_id"
-    t.bigint "product_id"
+    t.bigint "tool_id"
+    t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["product_id"], name: "index_purchases_on_product_id"
-    t.index ["student_id"], name: "index_purchases_on_student_id"
+    t.index ["tool_id"], name: "index_purchases_on_tool_id"
+    t.index ["user_id"], name: "index_purchases_on_user_id"
   end
 
-  create_table "students", force: :cascade do |t|
+  create_table "tool_feedbacks", force: :cascade do |t|
+    t.bigint "tool_id"
+    t.bigint "user_id"
+    t.text "content"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["tool_id"], name: "index_tool_feedbacks_on_tool_id"
+    t.index ["user_id"], name: "index_tool_feedbacks_on_user_id"
   end
 
-  create_table "tutors", force: :cascade do |t|
+  create_table "tools", force: :cascade do |t|
+    t.string "name"
+    t.text "description"
+    t.string "pdf_url"
+    t.string "audio_url"
+    t.integer "price"
+    t.bigint "user_id"
+    t.bigint "course_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["course_id"], name: "index_tools_on_course_id"
+    t.index ["user_id"], name: "index_tools_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -62,10 +75,21 @@ ActiveRecord::Schema.define(version: 2018_12_20_222640) do
     t.datetime "remember_created_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean "teacher"
+    t.boolean "student"
+    t.string "first_name"
+    t.string "last_name"
+    t.text "biographie"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "purchases", "products"
-  add_foreign_key "purchases", "students"
+  add_foreign_key "course_feedbacks", "courses"
+  add_foreign_key "course_feedbacks", "users"
+  add_foreign_key "purchases", "tools"
+  add_foreign_key "purchases", "users"
+  add_foreign_key "tool_feedbacks", "tools"
+  add_foreign_key "tool_feedbacks", "users"
+  add_foreign_key "tools", "courses"
+  add_foreign_key "tools", "users"
 end

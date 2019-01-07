@@ -1,14 +1,13 @@
 Rails.application.routes.draw do
-  get 'course_feedbacks/courses'
-  get 'course_feedbacks/pages'
-  get 'course_feedbacks/product_feedbacks'
-  get 'course_feedbacks/products'
-  get 'course_feedbacks/purchases'
-  get 'course_feedbacks/students'
-  get 'course_feedbacks/tutors'
   devise_for :users
   root to: 'pages#home'
- get "products", to: "products#index"
 
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  get '/about', to: 'pages#about', as: 'about'
+  get '/contact', to: 'pages#contact', as: 'contact'
+
+  resources :courses, only: [:show]
+  get 'tools/tools_course_index', to: "tools#tools_course_index", as: 'tools_course_index'
+  get 'users/tutor_dashboards', to: 'dashboards#tutor_dashboard', as: 'tutor_dashboard'
+  get 'users/student_dashboards', to: 'dashboards#student_dashboard', as: 'student_dashboard'
+
 end

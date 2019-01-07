@@ -1,0 +1,27 @@
+<p>Code:  <%= @course.code %> </p>
+<p> Title:  <%= @course.title %> </p>
+<p> Team :
+  <% @tools.each do |tool| %>
+    <%= tool.user.first_name %>
+    <%= tool.user.last_name %>
+  <% end %>
+</p>
+<p> Course description: <%= @course.description %> </p>
+<p> Category: <%= @course.category %> </p>
+<p> List of tools: </p>
+<div class="index-tool-container">
+  <% @tools.each do |tool| %>
+    <div class="tool-card">
+      <div class="card-title">
+        <%= tool.name %>
+      </div>
+      <div class="card-content">
+        <%= tool.description %>
+      </div>
+      <div class="card-footer">
+        <%= tool.pdf_url %>
+        <%= tool.audio_url %>
+      </div>
+    </div>
+  <% end %>
+</div>
