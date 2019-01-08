@@ -1,0 +1,15 @@
+<div class="tool-card">
+  <%= link_to tool_path(tool) do %>
+    <div class="tool-card-title">
+      <%= tool.name %>
+    </div>
+    <div class="tool-card-content">
+      <%= tool.description %>
+    </div>
+    <div class="tool-card-footer">
+      <%= tool.pdf_url %>
+      <%= tool.audio_url %>revi
+    </div>
+  <% end %>
+</div>
+

@@ -1,3 +1,4 @@
+<div class="tool-show-container">
 <div id="tool-name">
   <strong>Name: </strong><%= @tool.name %>
 </div>
@@ -13,16 +14,18 @@
 <div id="tool-price">
   <strong>Price: </strong> <%= @tool.price %> CAD
 </div>
-<div id="tool-add">
-  <a href="">Add a tool to this course </a>
-</div>
 <div id="tool-feedback">
   <strong>Add a feedback</strong>
   <p><strong>See all the reviews</strong>
+    <% if @tool_feedbacks != nil %>
     <% @tool_feedbacks.each_with_index do |tool_feedback, index| %>
       <p><strong>Feedback n°<%=index + 1 %></strong></p>
       <p><strong>From: </strong><%= tool_feedback.user.first_name %> <%= tool_feedback.user.last_name %></p>
       <p> <%= tool_feedback.content %> </p>
     <% end %>
+    <%else %>
+      <p>no feedback yet</p>
+    <% end %>
   </p>
+</div>
 </div>
