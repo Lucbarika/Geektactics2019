@@ -1,0 +1,22 @@
+// Display created tool dynamicaly with js
+function renderForm(newFormHTML) {
+  var form = document.getElementById("new_tool");
+
+  form.innerHTML = newFormHTML;
+}
+
+function injectTool(newToolHTML) {
+  // Selecting the div where to inject it
+  var tools = document.getElementById('tool-card-content');
+
+  // Inject new content
+  tools.insertAdjacentHTML('beforeend', newToolHTML);
+}
+<% if @tool.valid? %>
+  // NO ERRORS
+  injectTool('<%= j(render("tools/show", { tool: @tool })) %>');
+  renderForm('<%= j(render("tools/form", { course: @course, tool: Tool.new })) %>');
+<% else %>
+  // SOME ERRORS
+  renderForm('<%= j(render("tools/form", { course: @course, tool: @tool })) %>');
+<% end %>
