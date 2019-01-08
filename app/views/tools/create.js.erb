@@ -11,6 +11,7 @@ function injectTool(newToolHTML) {
   // Inject new content
   tools.insertAdjacentHTML('beforeend', newToolHTML);
 }
+
 <% if @tool.valid? %>
   // NO ERRORS
   injectTool('<%= j(render("tools/newtool", { tool: @tool })) %>');

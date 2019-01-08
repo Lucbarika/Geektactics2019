@@ -10,6 +10,7 @@ class ToolsController < ApplicationController
     @tool = Tool.new(tool_params)
     @tool.course = @course
     @tool.user = current_user
+    @tool.save!
     if @tool.save
       respond_to do |format|
         format.html { redirect_to course_path(@course) }
