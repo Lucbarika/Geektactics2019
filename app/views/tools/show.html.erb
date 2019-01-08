@@ -17,6 +17,12 @@
   <a href="">Add a tool to this course </a>
 </div>
 <div id="tool-feedback">
-  Add a feedback
-  See all the reviews
+  <strong>Add a feedback</strong>
+  <p><strong>See all the reviews</strong>
+    <% @tool_feedbacks.each_with_index do |tool_feedback, index| %>
+      <p><strong>Feedback n°<%=index + 1 %></strong></p>
+      <p><strong>From: </strong><%= tool_feedback.user.first_name %> <%= tool_feedback.user.last_name %></p>
+      <p> <%= tool_feedback.content %> </p>
+    <% end %>
+  </p>
 </div>
