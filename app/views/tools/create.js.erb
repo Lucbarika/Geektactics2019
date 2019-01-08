@@ -9,11 +9,11 @@ function injectTool(newToolHTML) {
   // Selecting the div where to inject it
   var tools = document.getElementById('new-tool');
   // Inject new content
-  tools.insertAdjacentHTML('afterend', newToolHTML);
+  tools.insertAdjacentHTML('beforeend', newToolHTML);
 }
 <% if @tool.valid? %>
   // NO ERRORS
-  injectTool('<%= j(render("tools/show", { tool: @tool })) %>');
+  injectTool('<%= j(render("tools/newtool", { tool: @tool })) %>');
   renderForm('<%= j(render("tools/form", { course: @course, tool: Tool.new })) %>');
 <% else %>
   // SOME ERRORS
