@@ -2,6 +2,7 @@ class CoursesController < ApplicationController
   def show
     @course = Course.find(params[:id])
     tools_course_index
+    @course_feedbacks = @course.course_feedbacks
   end
 
   # method which shows all the tools for one particular course on the course/show page

@@ -27,3 +27,13 @@
     <% end %>
   <% end %>
 </div>
+<div class="index-course-feedbacks-container">
+  <strong>Add a feedback</strong>
+  <p><strong>See all the reviews</strong>
+    <% @course_feedbacks.each_with_index do |course_feedback, index| %>
+      <p><strong>Feedback n°<%=index + 1 %></strong></p>
+      <p><strong>From: </strong><%= course_feedback.user.first_name %> <%= course_feedback.user.last_name %></p>
+      <p> <%= course_feedback.content %> </p>
+    <% end %>
+  </p>
+</div>
