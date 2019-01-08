@@ -1,6 +1,7 @@
 class CoursesController < ApplicationController
   def show
     @course = Course.find(params[:id])
+    @tool = Tool.new
     tools_course_index
     @course_feedbacks = @course.course_feedbacks
   end

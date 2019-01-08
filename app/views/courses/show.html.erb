@@ -21,11 +21,14 @@
       </div>
       <div class="card-footer">
         <%= tool.pdf_url %>
-        <%= tool.audio_url %>
+        <%= tool.audio_url %>revi
       </div>
     </div>
     <% end %>
   <% end %>
+</div>
+<div id="tool-addition">
+  <%= render 'tools/form', course: @course, tool: @tool %>
 </div>
 <div class="index-course-feedbacks-container">
   <strong>Add a feedback</strong>
