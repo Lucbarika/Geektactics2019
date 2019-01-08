@@ -12,6 +12,7 @@
 <div class="index-tool-container">
   <% @tools.each do |tool| %>
     <div class="tool-card">
+      <%= link_to tool_path(tool) do %>
       <div class="card-title">
         <%= tool.name %>
       </div>
@@ -23,5 +24,6 @@
         <%= tool.audio_url %>
       </div>
     </div>
+    <% end %>
   <% end %>
 </div>
