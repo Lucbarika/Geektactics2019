@@ -38,11 +38,9 @@ class ToolsController < ApplicationController
   end
 
   def destroy
-    @course = Course.find(params[:id])
     find
     @tool.destroy
-    # redirect_to root_path
-    redirect_to course_path(@course)
+    redirect_to root_path
   end
 
   private
