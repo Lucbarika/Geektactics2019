@@ -7,6 +7,7 @@ Rails.application.routes.draw do
 
   resources :courses, only: [:show] do
     resources :tools, only: [:create]
+    resources :course_feedbacks, only: [:create]
   end
   resources :tools, only: [:show, :edit, :update, :destroy]
 

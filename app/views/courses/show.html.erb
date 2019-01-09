@@ -28,10 +28,14 @@
   <% end %>
 </div>
 <div id="new-tool">
+  <strong>Add a tool to tis course</strong>
   <%= render 'tools/form', course: @course, tool: @tool %>
 </div>
 <div class="index-course-feedbacks-container">
   <strong>Add a feedback</strong>
+  <div id="new-course-feedback">
+  <%= render 'course_feedbacks/form', course: @course, course_feedback: @course_feedback %>
+  </div>
   <div id="all-review-button">
     <p><strong>See all the reviews</strong>
   </div>
