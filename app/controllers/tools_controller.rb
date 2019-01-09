@@ -1,7 +1,10 @@
 class ToolsController < ApplicationController
+  def find
+    @tool = Tool.find(params[:id])
+  end
   def show
     # tool_params
-    @tool = Tool.find(params[:id])
+    find
     @tool_feedbacks = @tool.tool_feedbacks
   end
 
@@ -22,6 +25,20 @@ class ToolsController < ApplicationController
         format.js  # <-- idem
       end
     end
+  end
+
+  def edit
+    find
+  end
+
+  def update
+    edit
+    @tool.update(tool_params)
+    redirect_to tool_path(@tool)
+  end
+
+  def destroy
+
   end
 
   private

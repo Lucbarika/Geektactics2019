@@ -1,0 +1,9 @@
+<h1>Update Your Tool</h1>
+<%= simple_form_for( @tool) do |form| %>
+  <%= form.input :name %>
+  <%= form.input :description %>
+  <%= form.input :pdf_url %>
+  <%= form.input :audio_url %>
+  <%= form.input :price %>
+  <%= form.button :submit %>
+<% end %>
