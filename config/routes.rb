@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   resources :courses, only: [:show] do
     resources :tools, only: [:create]
   end
-  resources :tools, only: [:show, :edit, :update]
+  resources :tools, only: [:show, :edit, :update, :destroy]
 
   get 'tools/tools_course_index', to: "tools#tools_course_index", as: 'tools_course_index'
   get 'users/tutor_dashboards', to: 'dashboards#tutor_dashboard', as: 'tutor_dashboard'
