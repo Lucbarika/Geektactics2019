@@ -1,0 +1,23 @@
+function renderFormCourseFeedback(newFormHTML) {
+  var form = document.getElementById("form-new-course-feedback");
+
+  form.innerHTML = newFormHTML;
+}
+
+function injectCourseFeedback(newCourseFeedbackHTML) {
+  // Selecting the div where to inject it
+  var courseFeedbacks = document.getElementById('new-course-feedback');
+  // Inject new content
+  console.log(newCourseFeedbackHTML)
+  console.log(courseFeedbacks)
+  courseFeedbacks.insertAdjacentHTML('beforeend', newCourseFeedbackHTML);
+}
+
+<% if @course_feedback.valid? %>
+  // NO ERRORS
+  injectCourseFeedback('<%= j(render("course_feedbacks/show", { course_feedback: @course_feedback })) %>');
+  renderFormCourseFeedback('<%= j(render("course_feedbacks/form", { course: @course, course_feedback: CourseFeedback.new })) %>');
+<% else %>
+  // SOME ERRORS
+  renderFormCourseFeedback('<%= j(render("course_feedbacks/form", { course: @course, course_feedback: @course_feedback })) %>');
+<% end %>

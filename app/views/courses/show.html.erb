@@ -33,13 +33,16 @@
 </div>
 <div class="index-course-feedbacks-container">
   <strong>Add a feedback</strong>
-  <div id="new-course-feedback">
+  <div id="form-new-course-feedback">
   <%= render 'course_feedbacks/form', course: @course, course_feedback: @course_feedback %>
   </div>
   <div id="all-review-button">
     <p><strong>See all the reviews</strong>
   </div>
   <div class="all-reviews-display hidden">
+  <div id="new-course-feedback">
+
+  </div>
       <% @course_feedbacks.each_with_index do |course_feedback, index| %>
         <p><strong>Feedback n°<%=index + 1 %></strong></p>
         <p><strong>From: </strong><%= course_feedback.user.first_name %> <%= course_feedback.user.last_name %></p>
