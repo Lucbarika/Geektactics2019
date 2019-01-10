@@ -44,11 +44,24 @@
 
   </div>
       <% @course_feedbacks.each_with_index do |course_feedback, index| %>
+      <div class="feedback-number">
         <p><strong>Feedback n°<%=index + 1 %></strong></p>
+      </div>
+      <div class="feedback-author">
         <p><strong>From: </strong><%= course_feedback.user.first_name %> <%= course_feedback.user.last_name %></p>
+      </div>
+      <div class="feedback-content">
         <p> <%= course_feedback.content %> </p>
+      </div>
+      <div class="update-feedback">
+        <%= link_to edit_course_course_feedback_path(course_feedback) do %>
+          Update feedback
+        <% end %>
+      </div>
+      <div class="delete-feedback">
+        <%= link_to "Delete feedback", root_path, method: :delete %>
+      </div>
       <% end %>
-    </p>
   </div>
-</div>
+
 

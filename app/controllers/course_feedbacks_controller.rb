@@ -1,4 +1,7 @@
 class CourseFeedbacksController < ApplicationController
+  def find
+    @course_feedback = CourseFeedback.find(params[:id])
+  end
   def create
     @course = Course.find(params[:course_id])
     @course_feedback = CourseFeedback.new(course_feedback_params)
@@ -16,6 +19,23 @@ class CourseFeedbacksController < ApplicationController
         format.js  # <-- idem
       end
     end
+  end
+
+  def edit
+    @course_feedback = CourseFeedback.find(params[:course_id])
+  end
+
+  def update
+    find
+    @course_feedback.update(course_feedback_params)
+    @course = @course_feedback.course
+    redirect_to course_path(@course)
+  end
+
+  def destroy
+    find
+    @course_feedback.destroy
+    redirect_to course_path(@course)
   end
 
   private
