@@ -43,6 +43,11 @@ class ToolsController < ApplicationController
     redirect_to root_path
   end
 
+  def purchase_tool
+    find
+    # redirect_to purchase.new
+  end
+
   private
 
   def tool_params
