@@ -1,0 +1,16 @@
+<div class="user_purchases">
+  <strong>Purchases of: </strong>
+  <%= @user.first_name %> <%= @user.last_name %>
+</div>
+<p><strong>list of purchases</strong></p>
+<div class="list-purchases">
+  <% @purchases.each_with_index do |purchase, index| %>
+    <p><strong>Purchase n°</strong> <%=index + 1%></p>
+    <p> <strong>Tool name: </strong><%=  purchase.tool.name%></p>
+    <p><strong>Price: </strong><%=  purchase.tool.price%></p>
+    <% @sum += purchase.tool.price %>
+  <% end %>
+</div>
+<div class="tot-sum">
+  <p><strong>Total sum of your purchases: </strong><%= @sum %> CAD</p>
+</div>

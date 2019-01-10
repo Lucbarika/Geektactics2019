@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   end
   resources :tools, only: [:show, :destroy]
   resources :course_feedbacks, only: [:edit, :update, :destroy]
+  resources :purchases
   get 'tools/tools_course_index', to: "tools#tools_course_index", as: 'tools_course_index'
   get 'users/tutor_dashboards', to: 'dashboards#tutor_dashboard', as: 'tutor_dashboard'
   get 'users/student_dashboards', to: 'dashboards#student_dashboard', as: 'student_dashboard'
