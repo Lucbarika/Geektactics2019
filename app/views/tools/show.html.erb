@@ -14,6 +14,10 @@
   <div id="tool-price">
     <strong>Price: </strong> <%= @tool.price %> CAD
   </div>
+  <div id="add-to-purchase">
+    <strong>Purchase tool</strong>
+    <%= render 'purchases/form', tool: @tool, purchase: @purchase %>
+  </div>
   <div id="tool-feedback">
     <strong>Add a feedback</strong>
     <p><strong>See all the reviews</strong>
@@ -29,7 +33,11 @@
     </p>
   </div>
   <div class="update-tool">
+<<<<<<< HEAD
 
+=======
+    Update tool
+>>>>>>> 01295ddd6f2e15e7bb102c06b8064fcce9492ce7
   </div>
   <div class="delete-tool">
     <%= link_to "Delete tool", tool_path(@tool), method: :delete %>
