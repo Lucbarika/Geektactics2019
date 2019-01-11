@@ -1,8 +1,8 @@
 <div class="tool-show-container">
-  <div id="tool-name">
-    <strong>Name: </strong><%= @tool.name %>
+  <div class="tool-name">
+    <p><strong>Name: </strong><%= @tool.name.capitalize %></p>
   </div>
-  <div id="tool-description">
+  <div class="tool-description">
     <strong>Description: </strong> <%= @tool.description %>
   </div>
   <div id="tool-pdf">
@@ -33,11 +33,6 @@
     </p>
   </div>
   <div class="update-tool">
-<<<<<<< HEAD
-
-=======
-    Update tool
->>>>>>> 01295ddd6f2e15e7bb102c06b8064fcce9492ce7
   </div>
   <div class="delete-tool">
     <%= link_to "Delete tool", tool_path(@tool), method: :delete %>
