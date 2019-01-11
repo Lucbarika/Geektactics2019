@@ -9,9 +9,11 @@ Rails.application.routes.draw do
     resources :tools, only: [:create]
     resources :course_feedbacks, only: [:create, :edit, :update]
   end
-  resources :tools, only: [:show, :destroy]
+  resources :tools, only: [:show, :destroy] do
+    resources :purchases, only: [:create]
+  end
   resources :course_feedbacks, only: [:edit, :update, :destroy]
-  resources :purchases
+  resources :purchases, only: :index
   get 'tools/tools_course_index', to: "tools#tools_course_index", as: 'tools_course_index'
   get 'users/tutor_dashboards', to: 'dashboards#tutor_dashboard', as: 'tutor_dashboard'
   get 'users/student_dashboards', to: 'dashboards#student_dashboard', as: 'student_dashboard'
