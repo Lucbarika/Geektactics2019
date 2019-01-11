@@ -6,6 +6,7 @@ class ToolsController < ApplicationController
     # tool_params
     find
     @tool_feedbacks = @tool.tool_feedbacks
+    @purchase = Purchase.new
   end
 
   def create
@@ -43,10 +44,13 @@ class ToolsController < ApplicationController
     redirect_to root_path
   end
 
-  def purchase_tool
-    find
-    # redirect_to purchase.new
-  end
+  # def purchase_tool
+  #   find
+  #   # redirect_to purchase.new
+  #   @purchase = Purchase.new
+  #   @purchase.user = current_user
+  #   @purchase.tool = @tool
+  # end
 
   private
 
