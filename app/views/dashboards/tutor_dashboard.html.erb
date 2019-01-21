@@ -4,7 +4,7 @@
   </div>
   <div class="contain-container">
     <div class="avatar-div avatar-large">
-      ToDO uploader picture
+      <%= image_tag "default_user.jpg", height: 300 %>
     </div>
       <div class="infos-container">
         <div id="tutor_name" class="name-cell-style">
@@ -16,11 +16,12 @@
           <%= @tutor.biographie %>
         </div>
         <div class="tutor-course-container">
+          <strong>Courses Index:</strong>
           <% @tutor_courses.each do |course| %>
-          <div id="tutor-courses">
-            <%= course.title %>
+          <div class="tutor-courses">
+            <strong><%= course.title %></strong>
             <% course.tools.each do |tool| %>
-              <div id="tutor-course-tool">
+              <div class="tutor-course-tool">
               <%= tool.name %>
               <% end %>
               </div>

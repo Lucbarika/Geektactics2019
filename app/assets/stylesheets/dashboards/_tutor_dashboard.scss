@@ -16,6 +16,9 @@
   // for picture's style see components/avatar.scss --> class avatar-large
   margin: 50px;
   width: 350px;
+  border: solid rgba(54,54,54,100);
+  border-radius: 0%;
+  height: 310px;
 }
 #tutor_name {
   font-style: $headers-font;
@@ -26,7 +29,7 @@
   width:700px;
   height:100px;
   padding-top: 25px;
-  border: solid black;
+  border: solid rgba(54,54,54,100);
   margin-top: 50px;
   margin-bottom: 25px;
   padding-left: 10px;
@@ -43,4 +46,21 @@
   margin-top: 50px;
   margin-bottom: 25px;
   padding-left: 10px;
+}
+.tutor-course-container {
+  width:700px;
+  padding-top: 10px;
+  padding-bottom: 25px;
+  border: solid black;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  padding-left: 10px;
+}
+.tutor-courses {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: solid black;
+}
+.tutor-course-tool {
+padding-left: 10px;
 }
