@@ -18,14 +18,18 @@
         <div class="tutor-course-container">
           <strong>Courses Index:</strong>
           <% @tutor_courses.each do |course| %>
-          <div class="tutor-courses">
-            <strong><%= course.title %></strong>
+          <div class="tutor-course">
+            <div class="course-title">
+              <strong><%= course.title %></strong>
+            </div>
+            <div class="all-tools-course hidden">
             <% course.tools.each do |tool| %>
               <div class="tutor-course-tool">
               <%= tool.name %>
               <% end %>
               </div>
             <% end %>
+            </div>
           </div>
         <div id="add-course">
           add a course
