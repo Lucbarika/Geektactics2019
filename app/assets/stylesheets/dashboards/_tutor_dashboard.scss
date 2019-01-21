@@ -1,0 +1,30 @@
+
+.dashboard-title {
+  // text
+  font-size: 40px;
+  font-style: $headers-font;
+  text-align: center;
+  font-weight: bold;
+  // div size
+  height: 100px;
+  margin-top: 30px;
+}
+.contain-container {
+  display: flex;
+}
+.avatar-div {
+  // for picture's style see components/avatar.scss --> class avatar-large
+  margin: 50px;
+  width: 1300px;
+}
+#tutor_name {
+  font-style: $headers-font;
+  font-size: 24px;
+  font-weight: bold;
+}
+.name-cell-style {
+  width:300px;
+  height:100px;
+  margin-left: 50px;
+  margin-top: 25px;
+}
