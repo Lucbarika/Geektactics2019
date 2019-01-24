@@ -1,14 +1,20 @@
-<h1> Your student dashboard </h1>
-<div class="avatar">
-  ToDO uploader picture
-</div>
-<div id="student_name">
-  <strong>Student name:</strong>
-  <%= @student.first_name %>
-  <%= @student.last_name %>
-</div>
-<div id="student-biographie">
-  <strong>Biography:</strong> <%= @student.biographie %>
+<div class="student-dashboard-container">
+  <div class="dashboard-title">
+    Your student dashboard
+  </div>
+  <div class="contain-container">
+    <div class="avatar-div avatar-large">
+      <%= image_tag "default_user.jpg", height: 300 %>
+    </div>
+<div class="infos-container">
+  <div id="student_name" class="name-cell-style">
+    <%= @student.first_name %>
+    <%= @student.last_name %>
+  </div>
+
+
+<div class="biographie-cell-style">
+  <%= @student.biographie %>
 </div>
 <div class="student-course-container">
   <p><strong>Your courses: </strong></p>

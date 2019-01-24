@@ -1,0 +1,64 @@
+
+.dashboard-title {
+  // text
+  font-size: 40px;
+  font-style: $headers-font;
+  text-align: center;
+  font-weight: bold;
+  // div size
+  height: 100px;
+  margin-top: 30px;
+}
+.contain-container {
+  display: flex;
+}
+.avatar-div {
+  // for picture's style see components/avatar.scss --> class avatar-large
+  margin: 50px;
+  width: 350px;
+  border: solid rgba(54,54,54,100);
+  border-radius: 0%;
+  height: 310px;
+}
+#tutor_name {
+  font-style: $headers-font;
+  font-size: 24px;
+  font-weight: bold;
+}
+.name-cell-style {
+  width:700px;
+  height:100px;
+  padding-top: 25px;
+  border: solid rgba(54,54,54,100);
+  margin-top: 50px;
+  margin-bottom: 25px;
+  padding-left: 10px;
+}
+.biographie-cell-style {
+  font-size: 16px;
+  font-style:$body-font;
+  width:700px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  border: solid black;
+  margin-top: 50px;
+  margin-bottom: 25px;
+  padding-left: 10px;
+}
+.tutor-course-container {
+  width:700px;
+  padding-top: 10px;
+  padding-bottom: 25px;
+  border: solid black;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  padding-left: 10px;
+}
+.tutor-courses {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: solid black;
+}
+.tutor-course-tool {
+padding-left: 10px;
+}
