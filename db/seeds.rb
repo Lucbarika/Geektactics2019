@@ -24,7 +24,7 @@ lorem_ipsum = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do e
 # Users generation
 # 3 student
 2.times do
-student = User.new(
+user = User.new(
   first_name: Faker::Name.first_name,
     last_name: Faker::Name.last_name,
     email: Faker::Internet.email,
@@ -41,20 +41,19 @@ course = Course.new(
   category: categories.sample,
   code: Faker::Code.nric
       )
-  course.user = student
 
 3.times do
   course_feedback = CourseFeedback.new(
     content: lorem_ipsum
   )
   course_feedback.course = course
-  course_feedback.user = student
+  course_feedback.user = user
   course_feedback.save!
 end
 course.save!
 end
 
-student.save!
+user.save!
 end
 
 # 3 teacher
@@ -75,7 +74,7 @@ teacher = User.new(
         description: lorem_ipsum,
         price: (1..10).to_a.sample * 100,
         pdf_url: "pdf_url_test",
-        audio_url: "audio_url_test"
+        video_url: "https://www.youtube.com/embed/fKFbnhcNnjE?list=PL6AuTaocqrRP_tnkjSdjpFhnQeTjoxkSx"
           )
         tool.user = teacher
         tool.course = [Course.last, Course.first].sample
@@ -110,7 +109,7 @@ tool = Tool.new(
         description: lorem_ipsum,
         price: (1..10).to_a.sample * 100,
         pdf_url: "pdf_url_test",
-        audio_url: "audio_url_test"
+        video_url: "https://www.youtube.com/embed/fKFbnhcNnjE?list=PL6AuTaocqrRP_tnkjSdjpFhnQeTjoxkSx"
           )
         tool.user = student_teacher
         tool.course = [Course.last, Course.first].sample
@@ -122,7 +121,7 @@ course = Course.new(
   category: categories.sample,
   code: Faker::Code.nric
       )
-  course.user = student_teacher
+  # course.user = student_teacher
 course.save!
 
 student_teacher.save!
