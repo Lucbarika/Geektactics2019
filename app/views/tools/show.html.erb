@@ -1,27 +1,31 @@
 <div class="tool-show-container">
   <div class="tool-name">
-    <p><strong>Name: </strong><%= @tool.name.capitalize %></p>
+    <%= @tool.name.capitalize %>
   </div>
-  <div class="tool-description">
-    <strong>Description: </strong> <%= @tool.description %>
-  </div>
-  <div id="tool-pdf">
-    <strong>PDF: </strong> <%= @tool.pdf_url %>
-  </div>
-  <div id="tool-video">
-    <strong>Video: </strong>
-    <div class="tools-video">
-<iframe width="649" height="365" src="<%= @tool.video_url %>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
-
+  <div class="tool-details-container">
+    <div class="tool-description">
+      <strong>Description: </strong> <%= @tool.description %>
+    </div>
+    <div class="support-container">
+    <div id="tool-video">
+      <strong>Video: </strong>
+      <div class="tools-video">
+        <iframe width="649" height="365" src="<%= @tool.video_url %>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+    <div id="tool-pdf">
+      <strong>PDF: </strong> <%= @tool.pdf_url %>
+    </div>
+    </div>
   </div>
   <div id="tool-price">
     <strong>Price: </strong> <%= @tool.price %> CAD
   </div>
   <div id="add-to-purchase">
     <strong>Purchase tool</strong>
-    <%= render 'purchases/form', tool: @tool, purchase: @purchase %>
+      <%= render 'purchases/form', tool: @tool, purchase: @purchase %>
   </div>
+
   <div id="tool-feedback">
     <strong>Add a feedback</strong>
     <p><strong>See all the reviews</strong>
