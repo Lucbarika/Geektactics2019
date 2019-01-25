@@ -1,15 +1,19 @@
 <div class="tool-show-container">
-  <div id="tool-name">
-    <strong>Name: </strong><%= @tool.name %>
+  <div class="tool-name">
+    <p><strong>Name: </strong><%= @tool.name.capitalize %></p>
   </div>
-  <div id="tool-description">
+  <div class="tool-description">
     <strong>Description: </strong> <%= @tool.description %>
   </div>
   <div id="tool-pdf">
     <strong>PDF: </strong> <%= @tool.pdf_url %>
   </div>
-  <div id="tool-audio">
-    <strong>Audio: </strong> <%= @tool.audio_url %>
+  <div id="tool-video">
+    <strong>Video: </strong>
+    <div class="tools-video">
+<iframe width="649" height="365" src="<%= @tool.video_url %>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
   </div>
   <div id="tool-price">
     <strong>Price: </strong> <%= @tool.price %> CAD
@@ -33,7 +37,6 @@
     </p>
   </div>
   <div class="update-tool">
-    Update tool
   </div>
   <div class="delete-tool">
     <%= link_to "Delete tool", tool_path(@tool), method: :delete %>
