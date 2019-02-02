@@ -18,4 +18,7 @@ Rails.application.routes.draw do
   get 'users/tutor_dashboards', to: 'dashboards#tutor_dashboard', as: 'tutor_dashboard'
   get 'users/student_dashboards', to: 'dashboards#student_dashboard', as: 'student_dashboard'
 
+  # only for dev purposes
+  get '/styles', to: 'pages#styles', as: 'styles'
+
 end

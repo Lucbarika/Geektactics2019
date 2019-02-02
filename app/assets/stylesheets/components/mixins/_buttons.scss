@@ -1,0 +1,12 @@
+/* ------ MIXINS : BUTTONS ------ */
+
+@mixin button($bg-color, $color) {
+  background: $bg-color;
+  color: $color;
+}
+
+@mixin button-border($color) {
+  border: 3px solid $color;
+  color: $color;
+}
+

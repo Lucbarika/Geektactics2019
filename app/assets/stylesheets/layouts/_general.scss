@@ -1,0 +1,150 @@
+/* ------ PAGES : GENERAL ------ */
+
+// all the main styles for the app
+* {
+  margin: 0;
+}
+
+body {
+  font-size: 62.5%;
+  font-family: $body-font;
+  color: $medium-gray;
+}
+
+// headers
+
+h1, h2, h3, h4, h5 {
+  font-family: $headers-font;
+  color: $dark-gray;
+}
+
+h1 {
+  font-size: 4.2rem;
+  margin-block-start: 3.6rem;
+  margin-block-end: 1rem;
+}
+
+h2 {
+  font-size: 3.6rem;
+  margin-block-start: 2.6rem;
+  margin-block-end: 1rem;
+}
+
+h3 {
+  font-size: 3.2rem;
+  margin-block-start: 2.4rem;
+  margin-block-end: 1rem;
+}
+
+h4 {
+  font-size: 2.6rem;
+  margin-block-start: 2.4rem;
+  margin-block-end: 1rem;
+}
+
+h5 {
+  font-size: 2.4rem;
+  margin-block-start: 2.4rem;
+  margin-block-end: 1rem;
+}
+
+h6 {
+  color: $blue;
+  font-size: 2rem;
+  margin-block-start: 1.8rem;
+  margin-block-end: 1rem;
+  font-family: $accent-font;
+}
+
+// regular text
+
+p, a {
+  font-size: 1.4rem;
+  margin-block-start: 1.8rem;
+  margin-block-end: 1rem;
+}
+
+p .accent-text {
+  font-family: $accent-font;
+  color: $red;
+  font-size: 1.3rem;
+}
+
+p a {
+  color: $blue;
+  transition: all 0.25s ease;
+  &:hover {
+    text-decoration: none;
+    background: $blue;
+    color: white;
+  }
+}
+
+
+@media (min-width: $sm-screen) {
+} // end of sm-screen - 768px
+
+@media (min-width: $md-screen) {
+  // headers
+
+  h1, h2, h3, h4, h5 {
+    font-family: $headers-font;
+  }
+
+  h1 {
+    font-size: 5rem;
+    margin-block-start: 4.2rem;
+    margin-block-end: 1rem;
+  }
+
+  h2 {
+    font-size: 4.2rem;
+    margin-block-start: 2.6rem;
+    margin-block-end: 1rem;
+  }
+
+  h3 {
+    font-size: 3.6rem;
+    margin-block-start: 2.4rem;
+    margin-block-end: 1rem;
+  }
+
+  h4 {
+    font-size: 3.2rem;
+    margin-block-start: 2.4rem;
+    margin-block-end: 1rem;
+  }
+
+  h5 {
+    font-size: 2.8rem;
+    margin-block-start: 2.4rem;
+    margin-block-end: 1rem;
+  }
+
+  h6 {
+    font-size: 2.4rem;
+    margin-block-start: 1.8rem;
+    margin-block-end: 1rem;
+    font-family: $accent-font;
+  }
+
+  // regular text
+
+  p, a {
+    font-size: 1.8rem;
+    margin-block-start: 2rem;
+    margin-block-end: 1rem;
+  }
+
+  p .accent-text {
+    font-size: 1.7rem;
+  }
+
+} // end of md-screen - 992px
+
+@media (min-width: $lg-screen) {
+} // end of lg-screen - 1200px
+
+@media (min-width: $hg-screen) {
+} // end of hg-screen - 1440px
+
