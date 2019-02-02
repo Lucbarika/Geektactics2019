@@ -1,0 +1,36 @@
+/* ------ COMPONENTS : BUTTONS ------ */
+
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-block-start: 10px;
+  transition: all 0.25s ease;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.button-primary {
+  @include button($blue, white);
+  border: 3px solid $blue;
+  &:hover {
+    @include button(white, $blue);
+  }
+}
+
+.button-border-blue {
+  @include button-border($blue);
+  &:hover {
+    @include button($blue, white);
+  }
+}
+
+
+.button-alert {
+  @include button($red, white);
+  border: 3px solid $red;
+  &:hover {
+    @include button(white, $red);
+  }
+}

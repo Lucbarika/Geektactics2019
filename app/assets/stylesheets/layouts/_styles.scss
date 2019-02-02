@@ -1,0 +1,39 @@
+/* ------ LAYOUTS : STYLES HELPERS ------ */
+// for dev purposes only, don't forget to remove it before production
+
+/* only for dev */
+
+.styles-sections {
+  margin-left: 8%;
+  margin-right: 8%;
+
+  p {
+  font-size: 1.2rem;
+  color: $medium-gray;
+  border-bottom: 0.5px solid $medium-gray;
+  }
+}
+
+.styles-colors.dark-gray{
+  @include style-colors($dark-gray);
+}
+
+.styles-colors.medium-gray{
+  @include style-colors($medium-gray);
+}
+
+.styles-colors.light-gray{
+  @include style-colors($light-gray);
+}
+
+.styles-colors.dark-blue{
+  @include style-colors($blue);
+}
+
+.styles-colors.neon{
+  @include style-colors($red);
+}
+
+.styles-colors.peach{
+  @include style-colors($orange);
+}
