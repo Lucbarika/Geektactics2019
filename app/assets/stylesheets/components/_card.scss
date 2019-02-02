@@ -2,13 +2,14 @@
 //   display: flex;
 // }
 // Card for courses on home_page
-.course-card{
-
+.courses-card{
+margin: 10px;
 }
 // Tittle inside each card
 .course-title{
   text-align: center;
   margin-top: 20px;
+  color: black;
 }
 .course-footer{
 
@@ -16,6 +17,10 @@
 // Content inside each card
 .course-content {
   text-align: center;
+  background-color: grey;
+  color: black;
+  padding-top: 20px;
+  padding-bottom: 40px;
 }
 // Card for tools on course_show
 .tool-name {
