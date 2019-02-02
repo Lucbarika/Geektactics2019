@@ -1,4 +1,15 @@
 
+.this-course-title {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.this-course-container {
+  display: flex;
+}
 .index-tool-container{
   display: flex;
+  flex-wrap: wrap;
+}
+.this-course-details {
+  flex: 0 0 40%;
 }
