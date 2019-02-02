@@ -1,12 +1,16 @@
-<p>Code:  <%= @course.code %> </p>
-<p> Title:  <%= @course.title %> </p>
-<p> Team :
-  <% @tools.each do |tool| %>
-    <%= tool.user.first_name %>
-    <%= tool.user.last_name %>
-  <% end %>
-</p>
-<p> Course description: <%= @course.description %> </p>
+<div class="this-course-title">
+  <h1> <%= @course.code.capitalize %> - <%= @course.title.capitalize %></h1>
+</div>
+<div class="this-course-team">
+  <p><strong>Team :</strong>
+    <% @team.each do |member| %>
+      <%= member %>
+    <% end %>
+  </p>
+</div>
+<div class="this-course-description">
+  <p> <strong>Course description: </strong><%= @course.description %> </p>
+</div>
 <p> Category: <%= @course.category %> </p>
 <p> List of tools: </p>
 <div class="index-tool-container">
