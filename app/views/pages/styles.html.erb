@@ -59,7 +59,7 @@
       <p class="styles-colors dark-blue"></p>
     </div>
     <div class="col-xs-2">
-      <p>neon orange / <br>#F15156</p>
+      <p>red / <br>#DB2D43</p>
       <p class="styles-colors neon"></p>
     </div>
     <div class="col-xs-2">
@@ -74,16 +74,11 @@
 </div>
 
 <div class="container">
-  <div class="row">
-    <div id="buttons-styles">
-      <div><%= link_to "i'm a button", '#', class: "button-peach" %> </div>
-      <div><%= link_to "i'm an other button", '#', class: "button-border-neon" %><%= link_to "i'm a button too!", '#', class: "button-border-blue" %></div>
-      <div id="cta-styles">
-        <%= link_to "i'm a cta", '#', class: "cta-md" %>
-        <%= link_to "i'm a big cta", '#', class: "cta-big" %>
-        <%= link_to "i'm a special cta", '#', class: "cta-special" %>
-      </div>
+  <div id="buttons-styles">
+    <div><%= link_to "i'm the primary button", '#', class: "button button-primary" %> </div>
+    <div><%= link_to "i'm the secondary button", '#', class: "button button-border-blue" %></div>
+    <div id="cta-styles">
+      <%= link_to "i'm an alert button", '#', class: "button button-alert" %>
     </div>
-
   </div>
 </div>

@@ -1,5 +1,8 @@
-// Import your components CSS files here.
+/* ------ COMPONENTS : INDEX ------ */
+
+@import 'mixins/index';
 @import "alert";
 @import "navbar";
 @import "card";
 @import "avatar";
+@import 'buttons'
