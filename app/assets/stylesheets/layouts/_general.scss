@@ -8,12 +8,14 @@
 body {
   font-size: 62.5%;
   font-family: $body-font;
+  color: $medium-gray;
 }
 
 // headers
 
 h1, h2, h3, h4, h5 {
   font-family: $headers-font;
+  color: $dark-gray;
 }
 
 h1 {
@@ -47,6 +49,7 @@ h5 {
 }
 
 h6 {
+  color: $blue;
   font-size: 2rem;
   margin-block-start: 1.8rem;
   margin-block-end: 1rem;
@@ -63,8 +66,18 @@ p, a {
 
 p .accent-text {
   font-family: $accent-font;
-  color: red;
+  color: $red;
   font-size: 1.3rem;
+}
+
+p a {
+  color: $blue;
+  transition: all 0.25s ease;
+  &:hover {
+    text-decoration: none;
+    background: $blue;
+    color: white;
+  }
 }
 
 
@@ -124,8 +137,6 @@ p .accent-text {
   }
 
   p .accent-text {
-    font-family: $accent-font;
-    color: red;
     font-size: 1.7rem;
   }
 
