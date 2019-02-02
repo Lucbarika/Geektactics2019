@@ -5,10 +5,17 @@
 .course-card{
 
 }
+// Tittle inside each card
 .course-title{
+  text-align: center;
+  margin-top: 20px;
 }
 .course-footer{
 
+}
+// Content inside each card
+.course-content {
+  text-align: center;
 }
 // Card for tools on course_show
 .tool-name {
