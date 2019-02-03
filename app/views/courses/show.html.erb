@@ -1,20 +1,24 @@
   <div class="this-course-title">
+    <i class="fas fa-university"></i>
     <h1> <%= @course.code.capitalize %> - <%= @course.title.capitalize %></h1>
   </div>
 <div class="this-course-container">
   <div class="this-course-details">
+    <div class="this-course-category">
+      <p class="fas fa-graduation-cap detail-symb"></p>
+      <p><strong>Category: </strong><%= @course.category.capitalize %> </p>
+    </div>
+    <div class="this-course-description ">
+      <p class="fas fa-book detail-symb"></p>
+      <p><strong>Course description: </strong><%= @course.description %> </p>
+    </div>
     <div class="this-course-team">
+      <p class="fas fa-chess-pawn detail-symb"></p>
       <p><strong>Team :</strong>
         <% @team.each do |member| %>
           <%= member %>
         <% end %>
       </p>
-    </div>
-    <div class="this-course-description">
-      <p> <strong>Course description: </strong><%= @course.description %> </p>
-    </div>
-    <div class="this-course-category">
-      <p> Category: <%= @course.category %> </p>
     </div>
     </div>
   <div class="index-tool-container">
@@ -29,7 +33,7 @@
         </div>
         <div class="tool-card-footer">
           <div class="tool-card-pdf">
-            <i class="fas fa-file-pdf"></i><p><%= tool.pdf_url %></p>
+            <i class="fas fa-file-pdf"></i><p>See PDF</p>
           </div>
           <div class="tool-card-video">
             <i class="fas fa-video"></i><p>See video</p>
@@ -40,7 +44,9 @@
     <% end %>
   </div>
 </div>
-<div id="new-tool">
+
+<!-- Html code for adding new course if current user is the owner teacher of this course ToDo later -->
+<!-- <div id="new-tool">
   <strong>Add a tool to tis course</strong>
   <%= render 'tools/form', course: @course, tool: @tool %>
 </div>
@@ -78,3 +84,4 @@
   </div>
 
 
+ -->

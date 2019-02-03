@@ -7,6 +7,11 @@
   flex: 0 0 20%;
   border: solid $medium-gray 1px;
   border-radius: 1px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+.courses-card:hover {
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
 // Tittle inside each card
 .course-title{
@@ -21,7 +26,7 @@
 // Content inside each card
 .course-content {
   text-align: center;
-  background-color: $dark-gray;;
+  background-color: $medium-gray;
   color: black;
   padding-top: 20px;
   padding-bottom: 40px;
@@ -36,16 +41,21 @@
   flex: 0 0 40%;
   border: solid $medium-gray 1px;
   border-radius: 1px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+.tool-card:hover {
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
 .tool-card-title {
   text-align: center;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
   color: $dark-gray;
 }
 .tool-card-content {
   text-align: center;
-  margin-bottom: 15px;
-  margin-top: 15px;
+  margin-bottom: 20px;
+  margin-top: 20px;
   padding-right: 10px;
   padding-left: 10px;
 }
@@ -56,16 +66,18 @@
 .tool-card-footer {
   display: flex;
   text-align: center;
-  margin-bottom: 15px;
-  padding-right: 10px;
-  padding-left: 10px;
 }
 .tool-card-pdf {
   flex: 0 0 50%;
+  border-right: solid $medium-gray 1px;
+  border-top: solid $medium-gray 1px;
+  padding-top: 10px;
 }
 .tool-card-video {
   flex: 0 0 50%;
-  margin-left: 0;
+  border-right: solid $medium-gray 1px;
+  border-top: solid $medium-gray 1px;
+  padding-top: 10px;
 }
 .tool-card-footer p {
   font-size: 15px;

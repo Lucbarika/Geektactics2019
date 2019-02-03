@@ -9,10 +9,15 @@
   align-items: center;
   justify-content: space-between;
   background-color: black;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
 }
 
 /* Logo Laabb */
 .navbar-laabb-brand h1{
+  padding-bottom: 50px;
   font-size: 30px;
   color: white;
 }
