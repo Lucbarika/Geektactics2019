@@ -19,7 +19,8 @@ User.destroy_all
 # Add new basic elements
 puts "Seed generation"
 categories = ["math", "physics", "finance", "economy", "informatic", "literature", "language", "phylosophy", "sociology"]
-lorem_ipsum = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore."
+
+lorem_ipsum = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
 
 # Users generation
 # 3 student

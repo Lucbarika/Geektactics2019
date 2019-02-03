@@ -4,6 +4,7 @@ class CoursesController < ApplicationController
     @tool = Tool.new
     @course_feedback = CourseFeedback.new
     tools_course_index
+    team
     @course_feedbacks = @course.course_feedbacks
   end
 
@@ -13,9 +14,19 @@ class CoursesController < ApplicationController
     @tools = @course.tools
   end
 
+  def team
+    tools_course_index
+    @team = []
+    @tools.each do |tool|
+      member = "#{tool.user.first_name} #{tool.user.last_name}"
+      @team << member
+    end
+    @team.uniq!
+  end
   private
 
   def course_params
     params.require(:course).permit(:user_id)
   end
 end
+

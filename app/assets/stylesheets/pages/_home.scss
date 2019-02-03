@@ -1,4 +1,16 @@
 // Specific CSS for your home-page
-.index-home-container{
-  display: flex;
+.home-title {
+  text-align: center;
+  height: 100px;
+  margin-top: 130px;
+  margin-bottom: 30px;
 }
+
+.index-home-container {
+  display: flex;
+  flex-wrap: wrap;
+  // Center every line event if not 4 items. - ToDO: Change the function for after (works for MVP)
+  justify-content: center;
+
+}
+
