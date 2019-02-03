@@ -1,0 +1,17 @@
+<div class="home-title">
+  <h1>Liste de tous les cours disponibles</h1>
+</div>
+<div class="index-home-container">
+  <% @courses.each do |course| %>
+    <div class="courses-card">
+      <%= link_to course_path(course) do %>
+      <div class="course-content">
+        <p><%= course.description%></p>
+      </div>
+      <div class="course-title">
+        <h3><%= course.title%></h3>
+      </div>
+    </div>
+    <% end %>
+  <% end %>
+</div>
