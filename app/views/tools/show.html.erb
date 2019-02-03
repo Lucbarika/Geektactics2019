@@ -1,32 +1,38 @@
 <div class="tool-show-container">
   <div class="tool-name">
-    <%= @tool.name.capitalize %>
+    <h1><%=@tool.course.title.capitalize%> - <%=@tool.name.capitalize%></h1>
   </div>
   <div class="tool-details-container">
     <div class="tool-description">
-      <strong>Description: </strong> <%= @tool.description %>
+      <p><strong>Category: </strong> <%=@tool.course.category.capitalize%></p>
+      <br>
+      <br>
+      <p><strong>Description: </strong> <%= @tool.description %></p>
     </div>
     <div class="support-container">
     <div id="tool-video">
-      <strong>Video: </strong>
+      <h4>Video: </h4>
       <div class="tools-video">
         <iframe width="649" height="365" src="<%= @tool.video_url %>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
     </div>
-    <div id="tool-pdf">
-      <strong>PDF: </strong> <%= @tool.pdf_url %>
+    <div class="tool-pdf">
+      <h4>PDF: </h4>
+      <p>Download Course PDF: </p>
+      <p class="fas fa-file-pdf"></p>
+       <%= @tool.pdf_url %>
     </div>
     </div>
   </div>
-  <div id="tool-price">
+<!-- Code for displaying al the tools feedback toDo for later -->
+<!--   <div id="tool-price">
     <strong>Price: </strong> <%= @tool.price %> CAD
   </div>
   <div id="add-to-purchase">
     <strong>Purchase tool</strong>
       <%= render 'purchases/form', tool: @tool, purchase: @purchase %>
-  </div>
-
-  <div id="tool-feedback">
+  </div> -->
+  <!-- <div id="tool-feedback">
     <strong>Add a feedback</strong>
     <p><strong>See all the reviews</strong>
       <% if @tool_feedbacks != nil %>
@@ -46,3 +52,4 @@
     <%= link_to "Delete tool", tool_path(@tool), method: :delete %>
   </div>
 </div>
+ -->
