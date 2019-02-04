@@ -1,22 +1,29 @@
-<div class="tutor-dashboard-container">
   <div class="dashboard-title">
-    Your tutor dashboard
+    <h1>Your tutor dashboard</h1>
   </div>
   <div class="contain-container">
-    <div class="avatar-div avatar-large">
-      <%= image_tag "default_user.jpg", height: 300 %>
+    <div class="user-container">
+      <div class="avatar-large tutor-avatar">
+        <i class="fas fa-user-tie"></i>
+      </div>
+      <div class="tutor_name" class="name-cell-style">
+        <h5>Contact</h5>
+        <p><%= @tutor.first_name %> <%= @tutor.last_name %></p>
+      </div>
+      <div class="user-contact">
+        <p><%= @tutor.email%></p>
+      </div>
     </div>
       <div class="infos-container">
-        <div id="tutor_name" class="name-cell-style">
-          <%= @tutor.first_name %>
-          <%= @tutor.last_name %>
-        </div>
-
         <div class="biographie-cell-style">
-          <%= @tutor.biographie %>
+          <p>About me</p>
+          <p><%= @tutor.biographie %></p>
+        </div>
+        <div class="resume-cell-style">
+          <p>Resume</p>
         </div>
         <div class="tutor-course-container">
-          <strong>Courses Index:</strong>
+          <p><strong>Courses Index:</strong></p>
           <% @tutor_courses.each do |course| %>
           <div class="tutor-course">
             <div class="course-title">
@@ -31,10 +38,12 @@
             <% end %>
             </div>
           </div>
-        <div id="add-course">
-          add a course
-        </div>
       </div>
     </div>
+  </div>
+  </div>
+  <div class="skills-container">
+  <div class="skills">
+    <p>Teacher skills</p>
   </div>
 </div>
