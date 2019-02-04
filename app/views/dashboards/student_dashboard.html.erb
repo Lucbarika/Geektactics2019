@@ -17,13 +17,13 @@
   <%= @student.biographie %>
 </div>
 <div class="student-course-container">
-  <p><strong>Your courses: </strong></p>
+  <h5><strong>Your courses: </strong></h5>
   <% @student_courses.each do |course| %>
   <div id="student-courses">
-    <strong><%= course.title %></strong> détails
+    <p><strong><%= course.title %></strong> détails</p>
     <% course.tools.each do |tool| %>
       <div id="student-course-tool">
-      <%= tool.name %>
+      <p> <%= tool.name %></p>
       <% end %>
       </div>
     <% end %>
