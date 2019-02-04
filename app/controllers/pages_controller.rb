@@ -1,5 +1,9 @@
 class PagesController < ApplicationController
   def home
+    @courses = Course.all[0..3]
+  end
+
+  def relief
     @courses = Course.all
   end
 

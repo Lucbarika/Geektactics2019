@@ -17,7 +17,7 @@ Rails.application.routes.draw do
   get 'tools/tools_course_index', to: "tools#tools_course_index", as: 'tools_course_index'
   get 'users/tutor_dashboards', to: 'dashboards#tutor_dashboard', as: 'tutor_dashboard'
   get 'users/student_dashboards', to: 'dashboards#student_dashboard', as: 'student_dashboard'
-
+  get 'relief', to: "pages#relief", as: 'relief'
   # only for dev purposes
   get '/styles', to: 'pages#styles', as: 'styles'
 
