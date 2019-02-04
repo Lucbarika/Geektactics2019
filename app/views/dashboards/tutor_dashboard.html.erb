@@ -1,12 +1,17 @@
 <div class="tutor-dashboard-container">
+
   <div class="dashboard-title">
     Your tutor dashboard
   </div>
+
   <div class="contain-container">
+
     <div class="avatar-div avatar-large">
       <%= image_tag "default_user.jpg", height: 300 %>
     </div>
+
       <div class="infos-container">
+
         <div id="tutor_name" class="name-cell-style">
           <%= @tutor.first_name %>
           <%= @tutor.last_name %>
@@ -15,26 +20,40 @@
         <div class="biographie-cell-style">
           <%= @tutor.biographie %>
         </div>
+
         <div class="tutor-course-container">
           <strong>Courses Index:</strong>
           <% @tutor_courses.each do |course| %>
-          <div class="tutor-course">
-            <div class="course-title">
-              <strong><%= course.title %></strong>
-            </div>
-            <div class="all-tools-course hidden">
-            <% course.tools.each do |tool| %>
-              <div class="tutor-course-tool">
-              <%= tool.name %>
-              <% end %>
+            <div class="tutor-course">
+
+              <div class="course-title">
+                <strong><%= course.title %></strong>
               </div>
-            <% end %>
+
+              <div class="all-tools-course hidden">
+                <% course.tools.each do |tool| %>
+                  <div class="tutor-course-tool">
+                  <%= tool.name %>
+                  </div>
+                <% end %>
+              </div>
+
             </div>
-          </div>
+            <!-- /tutor-course -->
+          <% end %>
+
         <div id="add-course">
           add a course
         </div>
+
       </div>
+      <!-- tutor-course-container -->
+
     </div>
+    <!-- /infos-container -->
+
   </div>
+  <!-- /contain-container -->
+
 </div>
+<!-- /tutor-dashboard-container -->
