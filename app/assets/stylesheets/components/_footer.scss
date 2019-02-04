@@ -1,0 +1,29 @@
+/* ------ COMPONENTS : FOOTER ------ */
+
+
+footer {
+  margin-block-start: 30px;
+  width: 100vw;
+  background: $light-gray;
+}
+
+#footer-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
+
+  a, p {
+    color: $dark-gray;
+    font-size: 1.2rem;
+    font-family: $headers-font;
+    text-transform: uppercase;
+    padding: 2px 4px;
+    margin: 2px 6px;
+    transition: all 0.3s ease;
+  }
+  a:hover {
+    background: $dark-gray;
+    color: white;
+  }
+}
