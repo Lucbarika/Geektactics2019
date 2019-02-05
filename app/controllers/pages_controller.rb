@@ -10,4 +10,8 @@ class PagesController < ApplicationController
   def styles
     #render view, only for dev purposes
   end
+
+  def debrief
+    @coursefeedbacks = CourseFeedback.all
+  end
 end

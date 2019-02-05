@@ -1,0 +1,29 @@
+  <h1>Profitez des avis des anciens étudiants pour faire un meilleur choix de cours</h1>
+<div class="debrief-container">
+  <div class="left-column">
+    <p>lefet column</p>
+  </div>
+  <div class="card-container">
+  <%@coursefeedbacks.each do |coursefeedback| %>
+  <div class="coursefeedback-card">
+    <div class="coursefeedback-card-first-row">
+      <div class="coursefeedback-card-course">
+        <p><%=coursefeedback.course.title%></p>
+      </div>
+      <div class="course-feedback-card-name">
+        <p><%=coursefeedback.user.first_name%></p>
+        <p><%=coursefeedback.user.last_name%></p>
+      </div>
+      <div class="coursefeedback-card-created">
+        <p><%=coursefeedback.created_at%></p>
+      </div>
+    </div>
+    <div class="course-feedback-content">
+      <p>"<%=coursefeedback.content%>"</p>
+    </div>
+  </div>
+  <% end %>
+  </div>
+  <div class="right-column">
+  </div>
+</div>
