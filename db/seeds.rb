@@ -24,6 +24,95 @@ user_test_mvp = User.new(
   student: true,
   )
 user_test_mvp.save!
+
+teacher1 = User.new(
+  first_name: Faker::Name.first_name,
+  last_name: Faker::Name.last_name,
+  email: Faker::Internet.email,
+  password: "000000",
+  biography: lorem_ipsum,
+  teacher: true,
+  student: false,
+  )
+teacher1.save!
+
+teacher2 = User.new(
+  first_name: Faker::Name.first_name,
+  last_name: Faker::Name.last_name,
+  email: Faker::Internet.email,
+  password: "000000",
+  biography: lorem_ipsum,
+  teacher: true,
+  student: false,
+  )
+teacher2.save!
+
+teacher3 = User.new(
+  first_name: Faker::Name.first_name,
+  last_name: Faker::Name.last_name,
+  email: Faker::Internet.email,
+  password: "000000",
+  biography: lorem_ipsum,
+  teacher: true,
+  student: false,
+  )
+teacher3.save!
+
+teacher4 = User.new(
+  first_name: Faker::Name.first_name,
+  last_name: Faker::Name.last_name,
+  email: Faker::Internet.email,
+  password: "000000",
+  biography: lorem_ipsum,
+  teacher: true,
+  student: false,
+  )
+teacher4.save!
+
+student1 = User.new(
+  first_name: Faker::Name.first_name,
+  last_name: Faker::Name.last_name,
+  email: Faker::Internet.email,
+  password: "000000",
+  biography: lorem_ipsum,
+  teacher: false,
+  student: true,
+  )
+student1.save!
+
+student2 = User.new(
+  first_name: Faker::Name.first_name,
+  last_name: Faker::Name.last_name,
+  email: Faker::Internet.email,
+  password: "000000",
+  biography: lorem_ipsum,
+  teacher: false,
+  student: true,
+  )
+student2.save!
+
+student3 = User.new(
+  first_name: Faker::Name.first_name,
+  last_name: Faker::Name.last_name,
+  email: Faker::Internet.email,
+  password: "000000",
+  biography: lorem_ipsum,
+  teacher: false,
+  student: true,
+  )
+student3.save!
+
+student4 = User.new(
+  first_name: Faker::Name.first_name,
+  last_name: Faker::Name.last_name,
+  email: Faker::Internet.email,
+  password: "000000",
+  biography: lorem_ipsum,
+  teacher: false,
+  student: true,
+  )
+student4.save!
+
 # Course generation
 math_derivation = Course.new(
   title: "Derivation",
@@ -72,3 +161,27 @@ chinese = Course.new(
   code: "lan0002"
   )
 chinese.save!
+
+literature = Course.new(
+  title: "Literature",
+  description: "lorem_ipsum",
+  category: "Language",
+  code: "lan0003"
+  )
+literature.save!
+
+economy_macro = Course.new(
+  title: "Macro Economy",
+  description: "lorem_ipsum",
+  category: "Economy",
+  code: "eco0001"
+  )
+economy_macro.save!
+
+economy_micro = Course.new(
+  title: "Micro Economy",
+  description: "lorem_ipsum",
+  category: "Economy",
+  code: "eco0002"
+  )
+economy_micro.save!
