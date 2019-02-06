@@ -11,18 +11,18 @@
   <div class="coursefeedback-card">
     <div class="coursefeedback-card-first-row">
       <div class="coursefeedback-card-course">
-        <p><%=coursefeedback.course.title%></p>
+        <h6><%=coursefeedback.course.title%></h6>
       </div>
       <div class="course-feedback-card-name">
-        <p><%=coursefeedback.user.first_name%></p>
-        <p><%=coursefeedback.user.last_name%></p>
+        <h6><%=coursefeedback.user.first_name%> - </h6>
+        <h6> <%=coursefeedback.user.last_name%></h6>
       </div>
       <div class="coursefeedback-card-created">
-        <p><%=coursefeedback.created_at%></p>
+        <h6><%=coursefeedback.created_at%></h6>
       </div>
     </div>
     <div class="course-feedback-content">
-      <p>"<%=coursefeedback.content%>"</p>
+      <p><i class="fas fa-quote-left"> </i><%=coursefeedback.content%> <i class="fas fa-quote-right"></i></p>
     </div>
   </div>
   <% end %>
