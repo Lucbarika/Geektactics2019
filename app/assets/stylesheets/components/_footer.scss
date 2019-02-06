@@ -3,7 +3,8 @@
 
 footer {
   margin-block-start: 30px;
-  width: 100vw;
+  width: 100%;
+  flex-shrink: 0;
   background: $light-gray;
 }
 
