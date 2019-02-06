@@ -20,5 +20,6 @@ Rails.application.routes.draw do
   get 'relief', to: "pages#relief", as: 'relief'
   # only for dev purposes
   get '/styles', to: 'pages#styles', as: 'styles'
+  get '/debrief', to: 'pages#debrief', as: 'debrief'
 
 end
