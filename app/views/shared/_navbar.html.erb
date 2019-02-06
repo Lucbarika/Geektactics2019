@@ -9,11 +9,9 @@
     <% if user_signed_in? %>
 
       <!-- Links when logged in -->
-      <%= link_to "Relief", "#", class: "navbar-wagon-item navbar-wagon-link" %>
-      <%= link_to "Debrief", "#", class: "navbar-wagon-item navbar-wagon-link" %>
+      <%= link_to "Relief", relief_path, class: "navbar-wagon-item navbar-wagon-link" %>
+      <%= link_to "Debrief", debrief_path, class: "navbar-wagon-item navbar-wagon-link" %>
       <%= link_to "Purchases", purchases_path, class: "navbar-wagon-item navbar-wagon-link" %>
-
-
       <!-- Avatar with dropdown menu -->
       <div class="navbar-wagon-item">
         <div class="dropdown">

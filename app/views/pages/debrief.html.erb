@@ -1,0 +1,32 @@
+<div id="debrief-title">
+  <p class="fas fa-coffee"></p>
+  <h1>Profitez des avis des anciens étudiants pour faire un meilleur choix de cours</h1>
+</div>
+<div class="debrief-container">
+  <div class="board-column">
+    board
+  </div>
+  <div class="card-container">
+  <%@coursefeedbacks.each do |coursefeedback| %>
+  <div class="coursefeedback-card">
+    <div class="coursefeedback-card-first-row">
+      <div class="coursefeedback-card-course">
+        <h6><%=coursefeedback.course.title%></h6>
+      </div>
+      <div class="course-feedback-card-name">
+        <h6><%=coursefeedback.user.first_name%> - </h6>
+        <h6> <%=coursefeedback.user.last_name%></h6>
+      </div>
+      <div class="coursefeedback-card-created">
+        <h6><%=coursefeedback.created_at%></h6>
+      </div>
+    </div>
+    <div class="course-feedback-content">
+      <p><i class="fas fa-quote-left"> </i><%=coursefeedback.content%> <i class="fas fa-quote-right"></i></p>
+    </div>
+  </div>
+  <% end %>
+  </div>
+  <div class="board-column">
+  </div>
+</div>
