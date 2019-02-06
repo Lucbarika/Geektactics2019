@@ -25,5 +25,50 @@ user_test_mvp = User.new(
   )
 user_test_mvp.save!
 # Course generation
-Math_derivation = Course.new(
+math_derivation = Course.new(
+  title: "Derivation",
+  description: "lorem_ipsum",
+  category: "Maths",
+  code: "math0001"
   )
+math_derivation.save!
+
+math_matrix = Course.new(
+  title: "Matrix",
+  description: "lorem_ipsum",
+  category: "Maths",
+  code: "math0002"
+  )
+math_matrix.save!
+
+phy_light = Course.new(
+  title: "Lighting theory",
+  description: "lorem_ipsum",
+  category: "Physiques",
+  code: "phy0001"
+  )
+phy_light.save!
+
+phy_nuclear = Course.new(
+  title: "Nuclear and radioactivity",
+  description: "lorem_ipsum",
+  category: "Physiques",
+  code: "phy0002"
+  )
+phy_nuclear.save!
+
+french = Course.new(
+  title: "French class",
+  description: "lorem_ipsum",
+  category: "Language",
+  code: "lan0001"
+  )
+french.save!
+
+chinese = Course.new(
+  title: "Chinese class",
+  description: "lorem_ipsum",
+  category: "Language",
+  code: "lan0002"
+  )
+chinese.save!
