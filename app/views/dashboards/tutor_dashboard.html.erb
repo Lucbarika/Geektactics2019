@@ -1,7 +1,12 @@
+
+<div class="tutor-dashboard-container">
   <div class="dashboard-title">
     <h1>Your tutor dashboard</h1>
   </div>
+
   <div class="contain-container">
+    <div class="avatar-div avatar-large">
+      <%= image_tag "default_user.jpg", height: 300 %>
     <div class="user-container">
       <div class="avatar-large tutor-avatar">
         <i class="fas fa-user-tie"></i>
@@ -14,7 +19,12 @@
         <p><%= @tutor.email%></p>
       </div>
     </div>
+
       <div class="infos-container">
+        <div id="tutor_name" class="name-cell-style">
+          <%= @tutor.first_name %>
+          <%= @tutor.last_name %>
+        </div>
         <div class="biographie-cell-style">
           <p>About me</p>
           <p><%= @tutor.biographie %></p>
@@ -22,28 +32,45 @@
         <div class="resume-cell-style">
           <p>Resume</p>
         </div>
+
         <div class="tutor-course-container">
           <p><strong>Courses Index:</strong></p>
           <% @tutor_courses.each do |course| %>
-          <div class="tutor-course">
-            <div class="course-title">
-              <strong><%= course.title %></strong>
-            </div>
-            <div class="all-tools-course hidden">
-            <% course.tools.each do |tool| %>
-              <div class="tutor-course-tool">
-              <%= tool.name %>
-              <% end %>
+            <div class="tutor-course">
+
+              <div class="course-title">
+                <strong><%= course.title %></strong>
               </div>
-            <% end %>
+
+              <div class="all-tools-course hidden">
+                <% course.tools.each do |tool| %>
+                  <div class="tutor-course-tool">
+                  <%= tool.name %>
+                  </div>
+                <% end %>
+              </div>
+
             </div>
+
+            <!-- /tutor-course -->
+          <% end %>
+
+        <div id="add-course">
+          add a course
+        </div>
           </div>
       </div>
+      <!-- tutor-course-container -->
+
     </div>
+    <!-- /infos-container -->
+
   </div>
+  <!-- /contain-container -->
   </div>
   <div class="skills-container">
   <div class="skills">
     <p>Teacher skills</p>
   </div>
 </div>
+<!-- /tutor-dashboard-container -->
