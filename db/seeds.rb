@@ -132,12 +132,42 @@ math_derivation.save!
         pdf_url: "pdf_url_test",
         video_url: "https://www.youtube.com/embed/fKFbnhcNnjE?list=PL6AuTaocqrRP_tnkjSdjpFhnQeTjoxkSx"
           )
-  tool.user =
-  tool.course =
+  tool.user = teachers.sample
+  tool.course = math_derivation
   tool_math_derivation1.save!
 
+  tool_math_derivation2 = Tool.new(
+        name: "Derivation level 1",
+        description: lorem_ipsum,
+        price: (1..10).to_a.sample * 100,
+        pdf_url: "pdf_url_test",
+        video_url: "https://www.youtube.com/embed/fKFbnhcNnjE?list=PL6AuTaocqrRP_tnkjSdjpFhnQeTjoxkSx"
+          )
+  tool.user = teachers.sample
+  tool.course = math_derivation
+  tool_math_derivation2.save!
 
+    tool_math_derivation3 = Tool.new(
+        name: "Derivation level2",
+        description: lorem_ipsum,
+        price: (1..10).to_a.sample * 100,
+        pdf_url: "pdf_url_test",
+        video_url: "https://www.youtube.com/embed/fKFbnhcNnjE?list=PL6AuTaocqrRP_tnkjSdjpFhnQeTjoxkSx"
+          )
+  tool.user = teachers.sample
+  tool.course = math_derivation
+  tool_math_derivation3.save!
 
+  tool_math_derivation4 = Tool.new(
+        name: "Derivation Advanced",
+        description: lorem_ipsum,
+        price: (1..10).to_a.sample * 100,
+        pdf_url: "pdf_url_test",
+        video_url: "https://www.youtube.com/embed/fKFbnhcNnjE?list=PL6AuTaocqrRP_tnkjSdjpFhnQeTjoxkSx"
+          )
+  tool.user = teachers.sample
+  tool.course = math_derivation
+  tool_math_derivation3.save!
 math_matrix = Course.new(
   title: "Matrix",
   description: "lorem_ipsum",
