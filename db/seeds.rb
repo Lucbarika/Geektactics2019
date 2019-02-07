@@ -69,6 +69,8 @@ teacher4 = User.new(
   )
 teacher4.save!
 
+teachers = [user_test_mvp, teacher1, teacher2, teacher3, teacher4]
+
 student1 = User.new(
   first_name: Faker::Name.first_name,
   last_name: Faker::Name.last_name,
@@ -113,6 +115,7 @@ student4 = User.new(
   )
 student4.save!
 
+students = [user_test_mvp, student1, student2, student3, student4]
 # Course generation
 math_derivation = Course.new(
   title: "Derivation",
@@ -121,6 +124,19 @@ math_derivation = Course.new(
   code: "math0001"
   )
 math_derivation.save!
+# Tools
+  tool_math_derivation1 = Tool.new(
+        name: "Derivation Basic",
+        description: lorem_ipsum,
+        price: (1..10).to_a.sample * 100,
+        pdf_url: "pdf_url_test",
+        video_url: "https://www.youtube.com/embed/fKFbnhcNnjE?list=PL6AuTaocqrRP_tnkjSdjpFhnQeTjoxkSx"
+          )
+  tool.user =
+  tool.course =
+  tool_math_derivation1.save!
+
+
 
 math_matrix = Course.new(
   title: "Matrix",
@@ -185,3 +201,35 @@ economy_micro = Course.new(
   code: "eco0002"
   )
 economy_micro.save!
+
+classical_music = Course.new(
+  title: "Classical Music Basic",
+  description: "lorem_ipsum",
+  category: "Music",
+  code: "mus0001"
+  )
+classical_music.save!
+
+ruby_coding = Course.new(
+  title: "Ruby and Rails",
+  description: "lorem_ipsum",
+  category: "informatique",
+  code: "inf0001"
+  )
+ruby_coding.save!
+
+python_coding = Course.new(
+  title: "Python",
+  description: "lorem_ipsum",
+  category: "informatique",
+  code: "inf0003"
+  )
+python_coding.save!
+
+front_end = Course.new(
+  title: "Front End",
+  description: "lorem_ipsum",
+  category: "informatique",
+  code: "inf0004"
+  )
+front_end.save!
