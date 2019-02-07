@@ -19,7 +19,7 @@ user_test_mvp = User.new(
   last_name: "Doe",
   email: "john.doe@email.com",
   password: "000000",
-  biography: lorem_ipsum,
+  biographie: lorem_ipsum,
   teacher: true,
   student: true,
   )
@@ -30,7 +30,7 @@ teacher1 = User.new(
   last_name: Faker::Name.last_name,
   email: Faker::Internet.email,
   password: "000000",
-  biography: lorem_ipsum,
+  biographie: lorem_ipsum,
   teacher: true,
   student: false,
   )
@@ -41,7 +41,7 @@ teacher2 = User.new(
   last_name: Faker::Name.last_name,
   email: Faker::Internet.email,
   password: "000000",
-  biography: lorem_ipsum,
+  biographie: lorem_ipsum,
   teacher: true,
   student: false,
   )
@@ -52,7 +52,7 @@ teacher3 = User.new(
   last_name: Faker::Name.last_name,
   email: Faker::Internet.email,
   password: "000000",
-  biography: lorem_ipsum,
+  biographie: lorem_ipsum,
   teacher: true,
   student: false,
   )
@@ -63,7 +63,7 @@ teacher4 = User.new(
   last_name: Faker::Name.last_name,
   email: Faker::Internet.email,
   password: "000000",
-  biography: lorem_ipsum,
+  biographie: lorem_ipsum,
   teacher: true,
   student: false,
   )
@@ -76,7 +76,7 @@ student1 = User.new(
   last_name: Faker::Name.last_name,
   email: Faker::Internet.email,
   password: "000000",
-  biography: lorem_ipsum,
+  biographie: lorem_ipsum,
   teacher: false,
   student: true,
   )
@@ -87,7 +87,7 @@ student2 = User.new(
   last_name: Faker::Name.last_name,
   email: Faker::Internet.email,
   password: "000000",
-  biography: lorem_ipsum,
+  biographie: lorem_ipsum,
   teacher: false,
   student: true,
   )
@@ -98,7 +98,7 @@ student3 = User.new(
   last_name: Faker::Name.last_name,
   email: Faker::Internet.email,
   password: "000000",
-  biography: lorem_ipsum,
+  biographie: lorem_ipsum,
   teacher: false,
   student: true,
   )
@@ -109,7 +109,7 @@ student4 = User.new(
   last_name: Faker::Name.last_name,
   email: Faker::Internet.email,
   password: "000000",
-  biography: lorem_ipsum,
+  biographie: lorem_ipsum,
   teacher: false,
   student: true,
   )
@@ -132,8 +132,8 @@ math_derivation.save!
         pdf_url: "pdf_url_test",
         video_url: "https://www.youtube.com/embed/fKFbnhcNnjE?list=PL6AuTaocqrRP_tnkjSdjpFhnQeTjoxkSx"
           )
-  tool.user = teachers.sample
-  tool.course = math_derivation
+  tool_math_derivation1.user = teachers.sample
+  tool_math_derivation1.course = math_derivation
   tool_math_derivation1.save!
 
   tool_math_derivation2 = Tool.new(
@@ -143,8 +143,8 @@ math_derivation.save!
         pdf_url: "pdf_url_test",
         video_url: "https://www.youtube.com/embed/fKFbnhcNnjE?list=PL6AuTaocqrRP_tnkjSdjpFhnQeTjoxkSx"
           )
-  tool.user = teachers.sample
-  tool.course = math_derivation
+  tool_math_derivation2.user = teachers.sample
+  tool_math_derivation2.course = math_derivation
   tool_math_derivation2.save!
 
     tool_math_derivation3 = Tool.new(
@@ -154,8 +154,8 @@ math_derivation.save!
         pdf_url: "pdf_url_test",
         video_url: "https://www.youtube.com/embed/fKFbnhcNnjE?list=PL6AuTaocqrRP_tnkjSdjpFhnQeTjoxkSx"
           )
-  tool.user = teachers.sample
-  tool.course = math_derivation
+  tool_math_derivation3.user = teachers.sample
+  tool_math_derivation3.course = math_derivation
   tool_math_derivation3.save!
 
   tool_math_derivation4 = Tool.new(
@@ -165,9 +165,10 @@ math_derivation.save!
         pdf_url: "pdf_url_test",
         video_url: "https://www.youtube.com/embed/fKFbnhcNnjE?list=PL6AuTaocqrRP_tnkjSdjpFhnQeTjoxkSx"
           )
-  tool.user = teachers.sample
-  tool.course = math_derivation
+  tool_math_derivation4.user = teachers.sample
+  tool_math_derivation4.course = math_derivation
   tool_math_derivation3.save!
+
 math_matrix = Course.new(
   title: "Matrix",
   description: "lorem_ipsum",
