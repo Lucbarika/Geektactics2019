@@ -18,7 +18,7 @@
         <h6> <%=coursefeedback.user.last_name%></h6>
       </div>
       <div class="coursefeedback-card-created">
-        <h6><%=coursefeedback.created_at%></h6>
+        <h6><%=coursefeedback.created_at.strftime('%Y-%m-%d')%></h6>
       </div>
     </div>
     <div class="course-feedback-content">
